@@ -1,0 +1,188 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  background: #4B4FC4;
+  padding: 10px;
+  width: 1000px;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 5px 5px #999999;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 {
+  margin-top: 0px;
+  margin-bottom: 13px;
+  color: white;
+}
+
+nav {
+  color: white;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+nav a:last-child {
+  margin-right: 0px;
+}
+
+nav a:first-child {
+  margin-left: 0px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  width: 200px;
+  background: #636363;
+  padding: 5px;
+  border-radius: 5px 5px 0px 0px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#input {
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+#input input[type="text"] {
+  padding: 8px;
+  width: 238px;
+  margin: 0px;
+  float: left;
+  border: 3px solid #4B4FC4;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#input input[type="button"] {
+  padding: 8px;
+  width: 90px;
+  border: 3px solid #4B4FC4;
+  margin: 0px;
+  background: #4B4FC4;
+  font-weight: bold;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#output {
+  width: 350px;
+}
+
+#output div {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #C4C4C4;
+  border-radius: 5px;
+}
+
+#output div span {
+  font-size: 15px;
+}
+
+#output div i {
+  margin-right: 5px;
+  font-size: 15px;
+  float: right;
+}
+
+#output div i:hover {
+  color: red;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background: #eeeeee;
+  width: 800px;
+  box-shadow: 5px 5px #888888;
+}
+
+.screenshot {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.normal {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.sidebar {
+  flex-direction: column;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.sidebar h1 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.sidebar input[type=password], .sidebar input[type=email], .sidebar input[type=submit], .sidebar textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 3px 3px #888888;
+}
+
+.sidebar input[type=submit] {
+  width: 50%;
+  margin-left: auto;
+  box-shadow: 3px 3px #888888;
+  background: #C4C4C4;
+  float: right;
+}
+
+.sidebar input[type=submit]:active {
+  box-shadow: inset 3px 3px #888888;
+}
+
+.item {
+  padding: 5px;
+}
+
+.item img {
+  box-shadow: 5px 5px #888888;
+}
