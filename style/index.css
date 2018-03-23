@@ -160,7 +160,7 @@ footer {
   margin-top: 0px;
 }
 
-.sidebar input[type=password], .sidebar input[type=email], .sidebar input[type=submit], .sidebar textarea {
+.sidebar input[type=text], .sidebar input[type=email], .sidebar input[type=submit], .sidebar textarea {
   padding: 10px;
   border-radius: 5px;
   border: none;
