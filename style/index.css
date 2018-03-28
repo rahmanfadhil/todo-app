@@ -110,8 +110,13 @@ footer {
 
 #output div i {
   margin-right: 5px;
-  font-size: 15px;
+  margin-left: 5px;
+  font-size: 17px;
   float: right;
+}
+
+#output div i:last-child:hover {
+  color: blue;
 }
 
 #output div i:hover {
