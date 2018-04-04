@@ -105,7 +105,7 @@
       // Function for search todo
       const searchTodo = function() {
         var text = search.value.toLowerCase() // Get the text and set to lowercase
-        let find = store.filter(word => word.toLowerCase().includes(text)); // Filer
+        let find = store.filter(word => word.toLowerCase().includes(text)); // Filter todo based on textbox
         alert(find.join(', ')) // Alert the result
       }
     </script>
