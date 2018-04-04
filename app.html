@@ -30,8 +30,8 @@
       </section>
       <section class="container normal animated fadeInDown">
         <div id="input">
-          <input type="text" name="find">
-          <input type="button" value="SUBMIT">
+          <input id="inputText" type="text">
+          <input onclick="addTodo()" type="button" value="SUBMIT">
         </div>
         <div id="output">
           <div>
@@ -55,6 +55,10 @@
             <i class="fa fa-edit"></i>
           </div>
         </div>
+        <div id="input">
+          <input id="search" type="text">
+          <input onclick="searchTodo()" type="button" value="SEARCH">
+        </div>
       </section>
     </main>
 
@@ -62,6 +66,67 @@
       <span>Copyright &copy; 2018</span>
     </footer>
 
+    <script type="text/javascript">
+      const input = document.getElementById('inputText')
+      const output = document.getElementById('output')
+      const search = document.getElementById('search')
+
+      var store = [] // Temporary array
+
+      // Function for add list into DOM
+      const showList = function() {
+        output.innerHTML = ""; // Clear the output field
+        store.forEach((data, index) => { // Display every single data in store array
+          var e = document.createElement('div');
+          e.id = index;
+          e.innerHTML = `
+            <span>${data}</span>
+            <i onclick="deleteTodo(${index})" class="fa fa-trash"></i>
+            <i onclick="editTodo(${index})" class="fa fa-edit"></i>
+          `;
+          output.appendChild(e)
+        })
+      }
+
+      // Check if localStorage.data exist
+      if (localStorage.data) {
+        store = JSON.parse(localStorage.data) // Add previous data to store array
+        showList() // Show list
+      }
+
+      // Function for add todo
+      const addTodo = function() {
+        store.push(input.value) // push data to store array
+        localStorage.data = JSON.stringify(store) // Add list to localStorage
+        showList() // Show list
+      }
+
+      // Function for delete todo
+      const deleteTodo = function(index) {
+        store.splice(index, 1) // Delete data from store
+        localStorage.data = JSON.stringify(store); // Add list to localStorage
+        showList() // Show list
+      }
+
+      const clearTodo = function() {
+        store = [] // Clear the store array
+        output.innerHTML = "" // Clear the list DOM
+        localStorage.clear() // Clear the localStorage
+      }
+
+      const editTodo = function(index) {
+        let edit = prompt('Edit Text')
+        store[index] = edit
+        localStorage.data = JSON.stringify(store);
+        showList()
+      }
+
+      const searchTodo = function() {
+        var text = search.value.toLowerCase()
+        let find = store.filter(word => word.toLowerCase().includes(text));
+        alert(find.join(', '))
+      }
+    </script>
   </div>
 </body>
 
