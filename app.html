@@ -108,23 +108,26 @@
         showList() // Show list
       }
 
+      // Function for clear todo
       const clearTodo = function() {
         store = [] // Clear the store array
         output.innerHTML = "" // Clear the list DOM
         localStorage.clear() // Clear the localStorage
       }
 
+      // Function for edit todo
       const editTodo = function(index) {
-        let edit = prompt('Edit Text')
-        store[index] = edit
-        localStorage.data = JSON.stringify(store);
-        showList()
+        let edit = prompt('Edit Text') // Ask wih prompt
+        store[index] = edit // Edit the store array
+        localStorage.data = JSON.stringify(store); // Save to localStorage
+        showList() // Show list
       }
 
+      // Function for search todo
       const searchTodo = function() {
-        var text = search.value.toLowerCase()
-        let find = store.filter(word => word.toLowerCase().includes(text));
-        alert(find.join(', '))
+        var text = search.value.toLowerCase() // Get the text and set to lowercase
+        let find = store.filter(word => word.toLowerCase().includes(text)); // Filer
+        alert(find.join(', ')) // Alert the result
       }
     </script>
   </div>
