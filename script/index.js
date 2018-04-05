@@ -31,6 +31,7 @@ const addTodo = function() {
     store.push(input.value) // push data to store array
     localStorage.data = JSON.stringify(store) // Add list to localStorage
     showList() // Show list
+    input.value = "";
   } else {
     alert('Todo cant be empty');
   }
